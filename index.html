@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analog Gallery — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5c5c5c;
+    --rule: #e4e4e4;
+    --accent: #E74725;
+    --panel: #faf7f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0d0d;
+      --text: #e6e6e6;
+      --muted: #a0a0a0;
+      --rule: #262626;
+      --accent: #FF9620;
+      --panel: #161616;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+    max-width: 760px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    color: var(--accent);
+  }
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
+  h2 {
+    font-size: 20px;
+    margin: 40px 0 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .summary {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    padding: 18px 20px;
+    margin: 0 0 8px;
+  }
+  .summary p:first-child { margin-top: 0; }
+  .summary p:last-child { margin-bottom: 0; }
+  .muted { color: var(--muted); font-size: 15px; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 15px;
+    background: var(--panel);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Analog Gallery — Privacy Policy</h1>
+<p class="updated">Last updated: 30 August 2026</p>
+
+<div class="summary">
+  <p><strong>In short.</strong> Analog Gallery is an archive for your film photography that works entirely on your phone. You do not need an account to use it, and nothing leaves your device unless you choose to sign in and subscribe to cloud backup.</p>
+  <p>The app contains <strong>no analytics, no advertising, no tracking and no third-party SDKs</strong> beyond Google's own Firebase and Google Play Billing. We do not sell or share your data with anyone.</p>
+</div>
+
+<h2>1. Who is responsible</h2>
+<p>Analog Gallery is developed and operated by Tim Spilka, Switzerland. For any question about this policy or about your data, see <a href="#contact">Contact</a> at the end of this page.</p>
+
+<h2>2. What stays on your device</h2>
+<p>By default, everything. When you use Analog Gallery without signing in, the app stores the following only in its private storage on your phone, where no other app can read it:</p>
+<ul>
+  <li>The image files of your scans, exactly as you imported them</li>
+  <li>Your rolls and their details — film stock, camera, shot date, push/pull stops, expiry</li>
+  <li>Per-photo details — frame number, tags, favourites, and which roll a photo belongs to</li>
+  <li>App settings, such as your appearance preference</li>
+</ul>
+<p>None of this is transmitted anywhere. Uninstalling the app deletes all of it.</p>
+
+<h2>3. Signing in (optional)</h2>
+<p>You can create an account with Google Sign-In or with an email address and password. Accounts are handled by Google Firebase Authentication, which stores your email address, an internal user ID, and — for email accounts — your password in hashed form. We never see your password.</p>
+<p>An account by itself does not upload anything. It exists so that a cloud backup subscription has somewhere to belong.</p>
+
+<h2>4. Cloud backup (optional, paid)</h2>
+<p>Cloud backup is a paid subscription. While it is active, the app copies your archive to Google Firebase so it survives a lost or broken phone and can be restored onto a new one.</p>
+
+<h3>Image files</h3>
+<p>Your scans are uploaded to Firebase Cloud Storage <strong>as the original, unmodified files</strong>. That is deliberate — the cloud copy is meant to be a true backup, not a re-compressed version.</p>
+<p>It has one consequence worth stating plainly: <strong>any metadata already embedded in those files is uploaded with them.</strong> If your lab's scanner or your camera wrote EXIF data into the file — including, in some cases, location data — that data is part of the file and is backed up along with it. Analog Gallery neither reads nor strips it.</p>
+
+<h3>Details about your archive</h3>
+<p>The following are stored in Firebase Firestore, under your user ID:</p>
+<ul>
+  <li><strong>Rolls</strong> — roll number, film stock name, ISO and format, camera name and format, shot date, stops pushed or pulled, whether the film was expired and its expiry date</li>
+  <li><strong>Photos</strong> — which roll a photo belongs to, frame number, image proportions, favourite flag, your tags, and a checksum used to detect a damaged copy</li>
+  <li><strong>Your own film stocks and cameras</strong> — the names you gave them</li>
+  <li><strong>Deletion dates</strong> for photos currently in the trash</li>
+</ul>
+<p>Your tags are free text. Whatever you type into them is stored, so treat them as you would any other note.</p>
+
+<h2>5. Subscriptions and payment</h2>
+<p>Subscriptions are sold and processed by Google Play. <strong>We never receive your payment details</strong> — not your card, not your address, not your name. Google shares only whether a purchase is valid.</p>
+<p>To check that, we store against your account: which tier you bought, when it expires, and the purchase token Google Play issued. Google Play also notifies our server when a subscription renews, lapses or is cancelled, so your access stays correct without the app having to be open.</p>
+
+<h2>6. What we never collect</h2>
+<ul>
+  <li>No analytics or usage telemetry of any kind</li>
+  <li>No advertising, ad networks or advertising identifiers</li>
+  <li>No crash or performance reporting SDK</li>
+  <li>No location collection by the app, and no access to your device's location</li>
+  <li>No contacts, no device identifiers, no browsing or app-usage data</li>
+  <li>No profiling and no automated decision-making</li>
+</ul>
+<p>We do not sell your data, and we do not share it with anyone for their own purposes.</p>
+
+<h2>7. Who processes your data</h2>
+<p>When cloud backup is on, your data is processed on our behalf by <strong>Google</strong>, through Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions and Google Play Billing. Google acts as our processor under its data processing terms.</p>
+<p>This means your data may be stored on Google servers outside Switzerland and the EEA. Those transfers rely on the safeguards in Google's data processing terms, including the European Commission's Standard Contractual Clauses.</p>
+
+<h2>8. Why we are allowed to process it</h2>
+<p>Under the Swiss Federal Act on Data Protection (FADP) and the EU General Data Protection Regulation (GDPR), we rely on:</p>
+<ul>
+  <li><strong>Performance of a contract</strong> — to run the account and the backup service you subscribed to</li>
+  <li><strong>Legal obligation</strong> — to keep records required for tax and accounting</li>
+  <li><strong>Legitimate interest</strong> — to verify subscriptions and prevent abuse of the service</li>
+</ul>
+
+<h2>9. How long we keep it</h2>
+<ul>
+  <li><strong>Deleted photos</strong> go to the trash and are kept for <strong>30 days</strong>, so a mistake can be undone. After that they are permanently removed from your device and from the cloud copy.</li>
+  <li><strong>Your archive</strong> is kept for as long as your account exists.</li>
+  <li><strong>If your subscription ends</strong>, the backup stops being updated. The existing cloud copy remains so you can resume without losing it — you can ask us to delete it at any time.</li>
+  <li><strong>If you delete your account</strong>, everything associated with it is removed within 30 days.</li>
+</ul>
+
+<h2>10. Deleting your data</h2>
+<p>You can delete individual photos or whole rolls in the app at any time.</p>
+<p>To delete your account and everything stored with it, write to the address below from the email address of the account. We will confirm and complete the deletion within 30 days. Uninstalling the app removes the local copy but does not delete a cloud backup — please ask, so we can remove it properly.</p>
+
+<h2>11. Your rights</h2>
+<p>You have the right to ask for access to your data, to have it corrected or deleted, to restrict or object to its processing, and to receive it in a portable form. To exercise any of these, write to the address below.</p>
+<p>If you believe we have handled your data improperly, you may complain to the Swiss Federal Data Protection and Information Commissioner (FDPIC), or — if you are in the EEA — to your national data protection authority.</p>
+
+<h2>12. Children</h2>
+<p>Analog Gallery is not directed at children and we do not knowingly collect data from children under 16. If you believe a child has given us personal data, contact us and we will delete it.</p>
+
+<h2>13. Changes to this policy</h2>
+<p>If this policy changes in a way that affects you, we will update the date at the top of this page and, where the change is significant, tell you in the app before it takes effect.</p>
+
+<h2 id="contact">14. Contact</h2>
+<p>Questions, requests and deletion enquiries:<br>
+<a href="mailto:REPLACE-WITH-YOUR-SUPPORT-EMAIL">REPLACE-WITH-YOUR-SUPPORT-EMAIL</a></p>
+
+<footer>
+  Analog Gallery · <code>com.analog.gallery</code>
+</footer>
+
+</body>
+</html>
